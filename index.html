@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETO VALENTINE // NÍVEL 05 (FINAL)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanline"></div>
+    <div class="container">
+        <div class="cabecalho-sistema">
+            <h1>SISTEMA TÁTICO - NÍVEL 05</h1>
+            <span class="badge">ALERTA MÁXIMO</span>
+        </div>
+        
+        <p id="status-text">> PREPARATIVOS FINAIS. SISTEMA REQUER DESBLOQUEIO PARA DICA 05...</p>
+        
+        <!-- Relógio -->
+        <div id="temporizador">00:00:00</div>
+        
+        <!-- Botão falso de espera -->
+        <button id="btn-espera" disabled>Aguardando Sincronização</button>
+        
+        <!-- Área de login / Pergunta de Segurança -->
+        <div id="area-senha" class="oculto">
+            <p class="alerta">> ÚLTIMA BARREIRA DE SEGURANÇA. RESPONDA PARA PROSSEGUIR:</p>
+            
+            <!-- COLOQUE A SUA ÚLTIMA PERGUNTA AQUI: -->
+            <p class="pergunta-seguranca">De quem foi o ultimo show que fomos juntos?</p>
+            
+            <input type="text" id="input-senha" placeholder="DIGITE SUA RESPOSTA">
+            <br>
+            <button id="btn-validar">EXECUTAR DESBLOQUEIO FINAL</button>
+            <p id="erro-senha" class="oculto">ERRO: Resposta incorreta. Tente novamente.</p>
+        </div>
+        
+        <!-- A Dica 5 -->
+        <div id="caixa-dica" class="oculto">
+            <div class="dica-header">BRIEFING FINAL: OPERAÇÃO VALENTINE</div>
+            
+            <p><strong>DRESS CODE:</strong> 'Smart-Casual de Precisão'. Evite peças estruturadas ou saias. A prioridade é a liberdade de movimento no circuito principal.</p>
+            
+            <p><strong>PROTOCOLO DE ACESSO:</strong> O perímetro interno exige descontaminação de calçados externos. Seus sapatos serão retidos na entrada. Navegaremos utilizando exclusivamente o revestimento de fricção da própria instalação para preservar a malha do piso.</p>
+            
+            <p><strong>TERRENO DA OPERAÇÃO:</strong> O complexo é projetado para hackear a sua percepção espacial. A arquitetura do local elimina completamente a noção de solo rígido e paredes convencionais. Navegar por este ambiente exige adaptação, pois a estrutura responde fisicamente a cada mudança de peso e direção.</p>
+            
+            <div class="destaque-final">
+                <p><strong>COORDENADAS:</strong> Setor de Imersão e Desorientação Controlada.</p>
+            </div>
+            
+            <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #ff6666;">
+                > AGUARDO VOCÊ NA ZONA DE EMBARQUE. FIM DA COMUNICAÇÃO.
+            </p>
+        </div>
+    </div>
+
+    <!-- Puxando o Javascript do tempo e senha -->
+    <script src="script.js"></script>
+</body>
+</html>

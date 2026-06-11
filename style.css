@@ -1,0 +1,177 @@
+body {
+    background-color: #0d0202;
+    color: #ff1a1a;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.scanline {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,26,26,0.15) 50%, rgba(0,0,0,0) 100%);
+    opacity: 0.8;
+    position: absolute;
+    bottom: 100%;
+    animation: scanline 8s linear infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes scanline {
+    0% { bottom: 100%; }
+    100% { bottom: -100px; }
+}
+
+.container {
+    background-color: #110303;
+    padding: 35px;
+    border: 1px solid #ff1a1a;
+    border-radius: 4px;
+    max-width: 550px;
+    width: 90%;
+    box-shadow: 0 0 25px rgba(255, 26, 26, 0.3), inset 0 0 15px rgba(255, 26, 26, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.cabecalho-sistema { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #ff1a1a; 
+    padding-bottom: 15px; 
+    margin-bottom: 25px; 
+}
+
+h1 { font-size: 20px; margin: 0; text-shadow: 0 0 10px rgba(255, 26, 26, 0.8); letter-spacing: 1px; }
+
+.badge {
+    background-color: #ff1a1a;
+    color: #0d0202;
+    padding: 4px 10px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 2px;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+#status-text, .alerta { font-size: 15px; color: #ff6666; margin-bottom: 25px; text-align: left; }
+
+.pergunta-seguranca {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+#temporizador {
+    font-size: 45px;
+    font-weight: bold;
+    color: #ffffff; 
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(255, 26, 26, 0.9);
+}
+
+#input-senha {
+    background-color: #0d0202;
+    color: #ffffff;
+    border: 1px solid #ff1a1a;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: center;
+    outline: none;
+    text-transform: uppercase;
+}
+
+#input-senha:focus { box-shadow: 0 0 15px rgba(255, 26, 26, 0.6); }
+
+#erro-senha { color: #ffffff; font-size: 14px; margin-top: 15px; font-weight: bold; background-color: #ff1a1a; display: inline-block; padding: 5px 10px; color: #000; }
+
+button {
+    background-color: rgba(255, 26, 26, 0.1);
+    color: #ff1a1a;
+    border: 1px solid #ff1a1a;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+}
+
+button:hover:not(:disabled) { background-color: #ff1a1a; color: #0d0202; box-shadow: 0 0 20px rgba(255, 26, 26, 0.8); }
+button:disabled { color: #660000; border-color: #660000; background-color: transparent; cursor: not-allowed; }
+
+.oculto { display: none !important; }
+
+#caixa-dica {
+    border: 1px solid #ff1a1a;
+    background-color: rgba(26, 5, 5, 0.8);
+    text-align: left;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+.dica-header {
+    background-color: #ff1a1a;
+    color: #0d0202;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* TEXTO DE LEITURA MAIS CLARO E LEGÍVEL */
+#caixa-dica p { 
+    padding: 0 25px; 
+    line-height: 1.7; 
+    margin-bottom: 25px; 
+    font-size: 16px; 
+    color: #ffd6d6; /* Um branco levemente rosado para não doer a vista */
+}
+
+/* DESTAQUES EM VERMELHO NEON */
+#caixa-dica strong {
+    color: #ff1a1a;
+    text-shadow: 0 0 5px rgba(255, 26, 26, 0.6);
+    letter-spacing: 0.5px;
+}
+
+.destaque-final {
+    text-align: center;
+    margin-top: 35px;
+    border-top: 1px dashed #ff1a1a;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    background: linear-gradient(0deg, rgba(255,26,26,0.05) 0%, transparent 100%);
+}
+
+.destaque-final p { 
+    margin-bottom: 0; 
+    font-size: 18px !important;
+}
+
+/* O texto final brilha em branco */
+.destaque-final strong {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(255, 26, 26, 1);
+    display: block;
+    margin-bottom: 10px;
+}
